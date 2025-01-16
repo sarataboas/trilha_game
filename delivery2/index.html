@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Trilha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet" /> <!-- link para ir buscar a fonte-->
+</head>
+<body>
+    <div class="header">
+        <h1>Jogo Da Trilha</h1>
+        <div class="header-buttons">
+            <button id="rules-button" class="home-button">Regras</button>
+            <button id="classifications-button" class="home-button">Classificações</button>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="homepage" class="homepage" style="display: none;">
+        <h2>Bem-vindo ao Jogo da Trilha</h2>
+        <button id="play-game" class="home-button">Jogar</button>
+        <button id="logout" class="home-button">Logout</button>
+    </div>
+
+        <!-- Modal para Regras -->
+    <div id="rules-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h1>Regras</h1>
+            <div class="rules-content">
+                <ul>
+                    <li>COLOCA TODAS AS TUAS PEÇAS NO TABULEIRO E MOVE-AS PARA FORMAR UMA LINHA DE 3 PEÇAS (UM "MOINHO").</li>
+                    <li>AO FORMAR UM MOINHO, PODES REMOVER UMA PEÇA DO TEU ADVERSÁRIO. DESFAZ UM MOINHO PARA DESBLOQUEAR NOVOS MOINHOS.</li>
+                    <li>PEÇAS DE UM MOINHO FORMADO NÃO PODEM SER REMOVIDAS, A NÃO SER QUE NÃO HAJA OUTRAS PEÇAS DISPONÍVEIS.</li>
+                    <li>O TEU OBJETIVO É DEIXAR O ADVERSÁRIO COM APENAS 2 PEÇAS OU SEM MOVIMENTOS POSSÍVEIS!</li>
+                </ul>
+            </div>
+            <button class="modal-close" onclick="closeModal('rules-modal')">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal para Classificações -->
+    <div id="class-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h1>Classificações</h1>
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>nick</th>
+                        <th>victories</th>
+                        <th>games</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas preenchidas via JavaScript -->
+                </tbody>
+            </table>
+            <button class="modal-close" onclick="closeModal('class-modal')">Fechar</button>
+        </div>
+    </div>
+
+
+
+    <!-- Login Area -->
+    <div class="login">
+        <form method="POST" class="formLogin">
+            <h1>Log-in</h1>
+            <label for="user">User</label>
+            <input type="user" id="user" name="user" placeholder="Insert your username" required autofocus />
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Insert your password" required />
+            <input id="btn" type="submit" name="Login"></form>
+    </div>
+
+    <!-- Configuration Area -->
+    <div id="config-area" class="config-area" style="display: none;">
+        <h2>Configurações</h2>
+        <label for="board-size">Tamanho do Tabuleiro:</label>
+        <select id="board-size">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+        </select>
+        <label for="game-mode">Modo de Jogo:</label>
+        <select id="game-mode">
+            <option value="computer">Contra Computador</option>
+            <option value="player"> Contra Outro Jogador </option>
+        </select>
+        <label for="first-player">Primeiro a Jogar:</label>
+        <select id="first-player">
+            <option value="player">Jogador</option>
+            <option value="computer">Computador</option>
+        </select>
+        <label for="ai-level">Nível da IA:</label>
+        <select id="ai-level">
+            <option value="easy">Fácil</option>
+            <option value="medium">Médio</option>
+            <option value="hard">Difícil</option>
+        </select>
+        <button id="start-game">Iniciar Jogo</button>
+        <button id="back-to-home-from-conf" class="home-button">Voltar</button>
+    </div>
+
+    <div id="multiplayer-waiting-area" style="display: none;">
+        <div class="waiting-content">
+            <h1 class="waiting-message">À espera de outro jogador...</h1>
+            <div class="spinner"></div>
+        </div>
+        <button id="leave-button-player" class="home-button">Sair</button>
+    </div>
+    
+
+    <div id="board-area">
+        <div id="status-message" class="status-message"></div>
+        <div id="game-container">
+            <div class="blue-side">
+                <button id="blue-piece"></button>
+            </div>
+            <div id="game-board">          
+                <button class="point" id="point"></button>
+                <div id="horizontal-line"></div>
+                <div id="vertical-line"></div>
+            </div>
+            <div class="red-side">
+                <button id="red-piece"></button>
+            </div>
+
+        </div>
+
+        <button id="leave-button" class="home-button">Sair</button>
+
+    </div>
+
+    
+    
+    <script src="game_logic.js"></script>
+    <script src="homepage.js"></script>
+    <script src="comunication.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+    "ranking": [
+        {
+            "nick": "jpleal",
+            "victories": 2,
+            "games": 2
+        },
+        {
+            "nick": "zp",
+            "victories": 0,
+            "games": 2
+        },
+        {
+            "nick": "ola",
+            "victories": 4,
+            "games": 6
+        },
+        {
+            "nick": "alex",
+            "victories": 1,
+            "games": 1
+        },
+        {
+            "nick": "alex",
+            "victories": 0,
+            "games": 1
+        }
+    ]
+}

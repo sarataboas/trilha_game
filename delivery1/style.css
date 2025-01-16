@@ -1,0 +1,696 @@
+
+body {
+    background-color: lemonchiffon; /* Neutral beige to complement the wooden tones */
+    font-family: "ArcadeClassic", sans-serif;
+    color: #705243;
+    height: 100%; 
+    margin: 0;    
+    padding: 0;   
+    overflow-x: hidden; 
+    
+}
+
+
+.header {
+    background: linear-gradient(to right, #705243, #AC9362);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0; /* Espaçamento interno ajustado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid #4f301f;
+    position: relative;
+    z-index: 10;
+}
+
+.header h1 {
+    font-size: 6rem; /* Ajuste do tamanho do título */
+    font-family: "ArcadeClassic", sans-serif;
+    color: #4B2E1E; /* Castanho escuro */
+    text-shadow: 2px 2px 5px white;
+    margin: 0 0 10px 0; /* Reduz o espaçamento inferior */
+}
+
+
+.header-button {
+    padding: 10px 20px; /* Tamanho do botão */
+    background-color: #AC9362;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: "ArcadeClassic", sans-serif;
+}
+
+.header-buttons {
+    display: flex; /* Organiza os botões em linha */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+.header-button:hover {
+    background-color: #705243;
+    transform: scale(1.1); /* Efeito de aumento */
+}
+
+
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.mitra.net.br/doutor/uploads/2/produtos/2021/09/produto-trilha-f37486ffb0.jpg') center/cover;
+    opacity: 0.3; /* Mistura o fundo com o gradiente */
+    z-index: -1; /* Coloca atrás do conteúdo */
+}
+
+
+h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #4f301f;
+}
+
+.login {
+    width: 90%;
+    max-width: 400px;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #AC9362;
+    border-radius: 15px;
+    align-self: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: transform 0.1s;
+    margin: 100px 300px 100px 400px;
+}
+
+.login:hover {
+    transform: scale(1.05);
+}
+
+.login input[type="user"], 
+.login input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s;
+}
+
+#btn {
+    background-color: #AC9362;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: "ArcadeClassic", sans-serif;
+}
+
+#btn:hover {
+    background-color: #705243;
+    transform: translateY(-2px);
+}
+
+.homepage {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-button {
+    display: block;
+    width: 90%;
+    max-width: 350px;
+    padding: 20px; 
+    margin: 25px auto;
+    background-color: #AC9362;
+    color: white;
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    font-family: "ArcadeClassic", sans-serif;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.home-button:hover {
+    background-color: #705243;
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+.classificacoes-button {
+    display: block;
+    width: 90%;
+    max-width: 350px; 
+    padding: 20px;
+    margin: 25px auto;
+    background-color:#705243 ;
+    color: white;
+    font-size: 1.5em; 
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "ArcadeClassic", sans-serif;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.classificacoes-button:hover {
+    background-color: #705243;
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+
+/* Efeito de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 100, 0, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 100, 0, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 100, 0, 0.4);
+    }
+}
+
+.home-button:focus {
+    animation: pulse 1s infinite; 
+}
+
+#config-area {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #AC9362;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    color: aliceblue;
+}
+
+.config-area label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.config-area select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+/* Estilos para a página de classificações */
+#classificacoes-area {
+    text-align: center;
+    padding: 20px;
+    background-color: #AC9362;
+    color: white;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#ranking-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+#ranking-table th, #ranking-table td {
+    border: 1px solid #0c0c0c;
+    padding: 10px;
+    color: black;
+}
+
+#ranking-table th {
+    background-color: #705243;
+}
+
+#ranking-table tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+#ranking-table tbody tr:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+#back-to-home-from-class {
+    background-color: #AC9362;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "ArcadeClassic", sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#back-to-home-from-class:hover {
+    background-color: #705243;
+    transform: translateY(-2px);
+}
+
+
+
+#start-game {
+    margin-top: 30px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color:white;
+    background-color: #AC9362;
+    font-family: "ArcadeClassic", sans-serif;
+}
+
+#start-game:hover {
+    background-color: #705243;
+    transform: translateY(-2px);
+}
+
+
+
+#board-area {
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: lemonchiffon;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#leave-game-button {
+    width: 90%;
+    max-width: 300px;
+    padding: 15px;
+    background-color: #AC9362;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "ArcadeClassic", sans-serif;
+    margin: 0px auto ;
+    margin-top: -10px;  
+    display: block; 
+    position: relative;
+}
+
+/* Estilos para a Área de Regras */
+#rules-area {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: #AC9362;
+    color: white;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#rules-area h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.rules-content {
+    text-align: left;
+    font-size: 1.2em;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.rules-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.rules-content ul li {
+    margin-bottom: 10px;
+}
+
+#back-to-home-from-rules, #back-to-home-from-conf, #back-to-home-from-class, #back-to-home-from-game {
+    background-color: #AC9362;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "ArcadeClassic", sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+#back-to-home-from-game {
+    top: 20px;
+}
+
+#back-to-home-from-rules:hover{
+    background-color: #705243;
+    transform: translateY(-2px);
+}
+
+#back-to-home-from-conf:hover {
+    background-color: #705243;
+    transform: translateY(-2px);
+}
+
+#back-to-home:hover {
+    background-color: #705243;
+    transform: translateY(-2px);
+}
+
+#back-to-home-from-game:hover{
+    background-color: #705243;
+    transform: translateY(-2px);
+}
+
+
+#button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Alinha o botão na parte inferior */
+    width: 100%;
+    height: 0vh;
+}
+
+.status-message {
+    visibility: hidden; /* Mantém o espaço reservado, mas oculta o conteúdo */
+    height: 30px; /* Altura fixa para o espaço reservado */
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #705243;
+    background-color: #D8C4A3;
+    padding: 15px;
+    border: 2px solid #705243;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 40px auto 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#game-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    height: calc(100% - 40px);
+}
+
+#game-board {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.blue-side, .red-side {
+    position: relative;
+    width: 10%;
+    max-width: 150px;
+    height: 300px;
+    background-color: #AC9362;
+    border: 6px solid #705243;
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.blue-side{
+    left: 5%;
+}
+
+.red-side{
+    right:5%;
+}
+
+
+button.red-piece, button.blue-piece {
+
+    width: 35px;
+    height: 35px;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    display:flex;
+    align-self: center;
+    justify-self: center;
+    display:flex;
+    align-self: center;
+    justify-self: center;
+    position: relative; /* Permite usar o z-index */
+    z-index: 5; /* Valor mais alto para aparecer na frente das linhas */
+
+
+}
+
+button.red-piece {
+    background-color: #d65a3d;
+}
+
+button.blue-piece {
+    background-color: #3d7ab5;
+}
+
+.volta-ponto{
+    display:flex; 
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.volta-ponto{
+    display:flex; 
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+button.point {
+        width: 35px;
+        height: 35px;
+        border-radius: 50px; 
+        border: 2px solid  #4f301f; 
+        background-color: lemonchiffon; 
+        cursor: pointer;
+        display: flex;
+        justify-self: center; 
+        align-self: center;
+        padding: 0; 
+        outline: none; 
+        position: relative; 
+        z-index: 5;
+    }
+    
+
+/* Efeito visual para quando o botão é clicado */
+button.point:active {
+    background-color: #e6dcc3;
+    border-color: #4f301f;
+}
+
+/* Efeito de focof */
+button.point:focus {
+    outline: none; /* Remove o contorno quando o botão está em foco */
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5); 
+}
+
+.horizontal-line {
+    width: 170%;
+    height: 10%;
+
+    align-self: center;
+    justify-self: center;
+  
+}
+
+.vertical-line {
+    width: 10%;
+    height: 170%;
+
+    align-self: center;
+    justify-self: center;
+}
+
+.vertical-line, .horizontal-line{
+    position: relative; 
+    z-index: 2; 
+    background-color: #4f301f; 
+    background-color: #4f301f; 
+
+}
+
+button.point, red
+
+button.point, red
+
+
+.fundo {
+    background-color: rgb(255, 255, 255);
+}
+
+/*pop ups*/
+
+/* Fundo translúcido do modal */
+.modal-overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+/* Estilos do modal */
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #AC9362;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    z-index: 11; /* Deve aparecer acima do overlay */
+    text-align: center;
+}
+
+.modal-content h1, .modal-content h2 {
+    color: #4f301f;
+}
+
+.modal-close {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #705243;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: #4f301f;
+}
+
+#multiplayer-waiting-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: lemonchiffon;
+    color: white;
+    font-family: "ArcadeClassic", sans-serif;
+    position: relative;
+}
+
+.waiting-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.waiting-content h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.waiting-message {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+}
+
+.spinner {
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #705243;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.leave-button {
+    padding: 15px 30px;
+    background-color: #705243;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "ArcadeClassic", sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.leave-button:hover {
+    background-color: #4f301f;
+    transform: translateY(-2px);
+}
+
